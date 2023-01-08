@@ -13,7 +13,8 @@ commands:
           name: Install requirements.txt
           command: pip install --user -r requirements.txt
       - run:
-          name: Transform api-data's JSON files to have the correct BASE_URL instead of http://localhost
+          name: Transform api-data's JSON files to have the correct BASE_URL instead of
+            http://localhost
           command: bash -x scripts/transform.sh
 
 jobs:
@@ -34,8 +35,14 @@ jobs:
           path: _gen.tar.gz
       # Trigger a new build of the deploy job of the deploy project
       - run:
-          name: Trigger a deploy of the deploy project passing the desired environment/location to deploy to
-          command: 'curl --header "Content-Type: application/json" --data "{\"build_parameters\": {\"deploy_location\": \"$CIRCLE_BRANCH\", \"CIRCLE_JOB\": \"deploy\"}}" --request POST "https://circleci.com/api/v1.1/project/github/PokeAPI/deploy/tree/master?circle-token=$CIRCLECI_API_TOKEN"'
+          name: Trigger a deploy of the deploy project passing the desired
+            environment/location to deploy to
+          command: 'curl --header "Content-Type: application/json" --data
+            "{\"build_parameters\": {\"deploy_location\": \"$CIRCLE_BRANCH\",
+            \"CIRCLE_JOB\": \"deploy\"}}" --request POST
+            "https://circleci.com/api/v1.1/project/github/PokeAPI/deploy/tree/master?circle-token=$CIRCLECI_API_TOKEN"'
+    # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
+    resource_class: large
 
 workflows:
   version: 2
