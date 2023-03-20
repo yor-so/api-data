@@ -47,6 +47,14 @@
             "url": "/api/v2/pokemon-species/147/"
         },
         {
+            "name": "gyarados",
+            "url": "/api/v2/pokemon-species/130/"
+        },
+        {
+            "name": "dragonair",
+            "url": "/api/v2/pokemon-species/148/"
+        },
+        {
             "name": "dunsparce",
             "url": "/api/v2/pokemon-species/206/"
         },
@@ -65,10 +73,6 @@
         {
             "name": "shellos",
             "url": "/api/v2/pokemon-species/422/"
-        },
-        {
-            "name": "gastrodon",
-            "url": "/api/v2/pokemon-species/423/"
         },
         {
             "name": "cresselia",
@@ -127,14 +131,6 @@
             "url": "/api/v2/pokemon-species/24/"
         },
         {
-            "name": "gyarados",
-            "url": "/api/v2/pokemon-species/130/"
-        },
-        {
-            "name": "dragonair",
-            "url": "/api/v2/pokemon-species/148/"
-        },
-        {
             "name": "steelix",
             "url": "/api/v2/pokemon-species/208/"
         },
@@ -157,6 +153,10 @@
         {
             "name": "gorebyss",
             "url": "/api/v2/pokemon-species/368/"
+        },
+        {
+            "name": "gastrodon",
+            "url": "/api/v2/pokemon-species/423/"
         },
         {
             "name": "serperior",
